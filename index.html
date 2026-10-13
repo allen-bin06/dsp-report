@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="GROWNSY Amazon DSP 广告分析报告：最新版本及历史版本预览。">
+  <title>GROWNSY · DSP 报告版本中心</title>
+  <style>
+    :root{font-family:Inter,"Noto Sans SC","Microsoft YaHei",Arial,sans-serif;color:#18304b;background:#f2f6fb;font-synthesis:none}
+    *{box-sizing:border-box}body{margin:0}a{color:inherit}button{font:inherit}
+    .top{padding:14px clamp(18px,3.2vw,54px);display:flex;align-items:center;justify-content:space-between;gap:16px;background:#fff;border-bottom:1px solid #e2eaf3}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:.02em}.mark{height:35px;width:35px;border-radius:12px;background:#096c85;color:white;display:grid;place-items:center;font-size:19px}
+    .topright{color:#64778d;font-size:12px}.topright strong{color:#0e6b83}
+    .hero{padding:34px clamp(18px,3.2vw,54px) 25px;background:linear-gradient(120deg,#102b4e,#155b73);color:#fff}
+    .kicker{font-size:12px;font-weight:750;letter-spacing:.09em;color:#84e1d8}.hero h1{font-size:clamp(27px,3vw,40px);line-height:1.2;letter-spacing:-.025em;margin:10px 0}
+    .hero p{font-size:14px;line-height:1.85;color:#d1e1ef;margin:0;max-width:850px}.stats{display:flex;flex-wrap:wrap;gap:13px;margin-top:22px}.stat{min-width:166px;border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:12px 15px;background:rgba(255,255,255,.06)}
+    .stat strong{font-size:24px;font-weight:750;display:block}.stat span{font-size:12px;color:#c4d9e9}
+    .wrap{display:grid;grid-template-columns:315px minmax(0,1fr);align-items:start;gap:20px;max-width:1800px;padding:23px clamp(18px,3.2vw,54px) 48px;margin:0 auto}
+    .sidebar,.workspace{background:#fff;border:1px solid #dde7f0;border-radius:17px;box-shadow:0 3px 12px rgba(22,46,71,.04);overflow:hidden}
+    .sect{padding:20px 19px 14px}.sect h2{font-size:15px;margin:0 0 6px}.sect p{margin:0;color:#718298;font-size:12px;line-height:1.7}
+    #versions{padding:0 10px 14px}.version{width:100%;display:flex;gap:10px;align-items:flex-start;text-align:left;background:none;border:1px solid transparent;border-radius:11px;cursor:pointer;padding:12px 10px;margin:4px 0;color:#223e56;transition:all .15s}
+    .version:hover{background:#eef7f9}.version.active{background:#eaf6f7;border-color:#a1d6d9}.vnum{background:#e4ebf1;color:#50687c;border-radius:8px;min-width:37px;text-align:center;padding:7px 4px;font-weight:800;font-size:12px}
+    .version.active .vnum{background:#087a87;color:white}.vbody{min-width:0}.vname{font-weight:750;font-size:13px;line-height:1.5}.vdate{color:#8391a2;font-size:11px;margin-top:3px}.vdesc{font-size:11px;color:#647991;line-height:1.65;margin-top:6px}
+    .help{margin:8px 18px 20px;border-radius:11px;background:#f2f6f9;border:1px solid #e5edf3;padding:13px 14px;font-size:12px;line-height:1.85;color:#62778b}
+    .help strong{color:#24465a}.toolbar{display:flex;gap:10px;align-items:center;justify-content:space-between;padding:16px 17px;border-bottom:1px solid #e4edf4;flex-wrap:wrap}
+    .t-title strong{display:block;font-size:17px}.t-title span{display:block;color:#778a9d;font-size:12px;margin-top:4px}
+    .actions{display:flex;flex-wrap:wrap;gap:8px}.btn{display:inline-flex;gap:7px;align-items:center;justify-content:center;text-decoration:none;border:1px solid #ccdce7;background:#fff;border-radius:9px;padding:9px 12px;color:#22475c;font-size:12px;font-weight:750;cursor:pointer}
+    .btn:hover{border-color:#0d8290}.btn-primary{background:#087b88;color:white;border-color:#087b88}.btn-primary:hover{background:#056875}
+    .notice{font-size:12px;color:#6c7b8b;padding:12px 17px;line-height:1.6;background:#f9fbfd;border-bottom:1px solid #e7eef4}
+    .framewrap{background:#e4eaf0;padding:12px;height:min(900px,calc(100vh - 110px));min-height:590px}
+    iframe{width:100%;height:100%;border:1px solid #d6e1eb;background:white;border-radius:9px}
+    .foot{display:flex;justify-content:space-between;gap:12px;color:#8290a0;font-size:11px;line-height:1.7;padding:15px clamp(18px,3.2vw,54px) 26px;max-width:1800px;margin:0 auto}
+    @media(max-width:1000px){.wrap{grid-template-columns:1fr}.framewrap{height:720px}.help{margin-top:0}.topright{display:none}}
+    @media(max-width:600px){.hero{padding-top:25px}.framewrap{height:650px;padding:5px}.stats{gap:8px}.stat{min-width:0;flex:1}.toolbar{padding:14px}.top{padding:11px 18px}.foot{display:block}}
+  </style>
+</head>
+<body>
+  <header class="top"><div class="brand"><span class="mark">G</span><span>GROWNSY&nbsp; / &nbsp;Amazon DSP</span></div><div class="topright">REPORT VERSION CENTER · <strong>公开预览网站</strong></div></header>
+  <section class="hero">
+    <div class="kicker">ADVERTISING INTELLIGENCE</div><h1>DSP 广告分析 · 版本中心</h1>
+    <p>同一网址查看最新报告、切换历史版本、对照每次功能更新。保留原始 HTML 报告，不修改其中的广告业务数据。</p>
+    <div class="stats"><div class="stat"><strong id="versionCount">5</strong><span>归档版本</span></div><div class="stat"><strong id="latestNum">V5</strong><span>当前最新版</span></div><div class="stat"><strong>永久入口</strong><span>网站首页及 /latest/</span></div></div>
+  </section>
+  <main class="wrap">
+    <aside class="sidebar">
+      <div class="sect"><h2>历史报告</h2><p>点击切换下方预览，也可以独立打开完整报告。</p></div>
+      <div id="versions"><div class="help">正在读取版本目录…</div></div>
+      <div class="help"><strong>后续如何更新？</strong>每次新增一个 V6、V7…，保留旧文件，同时更新 <code>latest/index.html</code> 和 <code>versions.js</code>；推送到 GitHub 后自动发布。</div>
+    </aside>
+    <section class="workspace">
+      <div class="toolbar"><div class="t-title"><strong id="selectedTitle">V5 · 每日 ACOS 标注版</strong><span id="selectedDescription">加载中…</span></div>
+        <div class="actions"><a class="btn" id="latestButton" href="./latest/">查看固定最新版</a><button class="btn" id="copyButton" type="button">复制当前版本链接</button><a class="btn btn-primary" id="openButton" href="./latest/" target="_blank" rel="noopener">新窗口打开 ↗</a></div></div>
+      <div class="notice">下方显示原始报告网页。Google Trends 图表需浏览器联网加载；Amazon SQP 如未授权则不显示真实数据。路径归因数据不能直接视为 DSP 的因果增量。</div>
+      <div class="framewrap"><iframe id="viewer" title="GROWNSY 报告预览" src="./latest/index.html" loading="eager" referrerpolicy="no-referrer"></iframe></div>
+    </section>
+  </main>
+  <footer class="foot"><span>GROWNSY DSP · 版本归档站点</span><span>注意：本站为公开网页，请确保发布内容已获授权。</span></footer>
+  <script src="./versions.js"></script>
+  <script>
+    (()=>{
+      const list=window.GROWNSY_VERSIONS||[];
+      const byId=Object.fromEntries(list.map(v=>[v.id,v]));
+      const container=document.getElementById('versions');
+      const viewer=document.getElementById('viewer');
+      const open=document.getElementById('openButton');
+      const query=new URLSearchParams(location.search);
+      let selected=byId[query.get('version')]?query.get('version'):(list[0]?.id||'v5');
+      document.getElementById('versionCount').textContent=list.length;
+      document.getElementById('latestNum').textContent=(list.find(v=>v.current)||list[0])?.id.toUpperCase()||'V5';
+      container.textContent='';
+      for(const v of list){
+        const b=document.createElement('button');b.type='button';b.className='version';b.dataset.id=v.id;
+        const n=document.createElement('span');n.className='vnum';n.textContent=v.id.toUpperCase();
+        const body=document.createElement('span');body.className='vbody';
+        const title=document.createElement('div');title.className='vname';title.textContent=v.name+(v.current?' · 最新':'');
+        const date=document.createElement('div');date.className='vdate';date.textContent=v.date;
+        const desc=document.createElement('div');desc.className='vdesc';desc.textContent=v.change;
+        body.append(title,date,desc);b.append(n,body);b.addEventListener('click',()=>show(v.id));container.append(b);
+      }
+      function show(id){
+        selected=id;const v=byId[id];if(!v)return;
+        const path=(v.current?'latest/index.html':v.file);viewer.src='./'+path;
+        open.href='./'+path;document.getElementById('selectedTitle').textContent=v.id.toUpperCase()+' · '+v.name;
+        document.getElementById('selectedDescription').textContent=v.date+' · '+v.change;
+        for(const b of container.children){b.classList.toggle('active',b.dataset.id===id);b.setAttribute('aria-pressed',b.dataset.id===id?'true':'false');}
+        const u=new URL(location.href);u.searchParams.set('version',id);history.replaceState(null,'',u);
+      }
+      show(selected);
+      const btn=document.getElementById('copyButton');btn.addEventListener('click',async()=>{
+        const u=new URL(location.href);u.searchParams.set('version',selected);
+        try{await navigator.clipboard.writeText(u.href);btn.textContent='已复制链接 ✓';setTimeout(()=>btn.textContent='复制当前版本链接',1800)}
+        catch(e){btn.textContent='复制失败：请复制地址栏网址';setTimeout(()=>btn.textContent='复制当前版本链接',3000)}
+      });
+    })();
+  </script>
+</body>
+</html>
