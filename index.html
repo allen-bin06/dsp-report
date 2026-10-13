@@ -39,7 +39,7 @@
   <section class="hero">
     <div class="kicker">ADVERTISING INTELLIGENCE</div><h1>DSP 广告分析 · 版本中心</h1>
     <p>同一网址查看最新报告、切换历史版本、对照每次功能更新。保留原始 HTML 报告，不修改其中的广告业务数据。</p>
-    <div class="stats"><div class="stat"><strong id="versionCount">5</strong><span>归档版本</span></div><div class="stat"><strong id="latestNum">V5</strong><span>当前最新版</span></div><div class="stat"><strong>永久入口</strong><span>网站首页及 /latest/</span></div></div>
+    <div class="stats"><div class="stat"><strong id="versionCount">6</strong><span>归档版本</span></div><div class="stat"><strong id="latestNum">V6</strong><span>当前最新版</span></div><div class="stat"><strong>永久入口</strong><span>网站首页及 /latest/</span></div></div>
   </section>
   <main class="wrap">
     <aside class="sidebar">
@@ -48,9 +48,9 @@
       <div class="help"><strong>后续如何更新？</strong>每次新增一个 V6、V7…，保留旧文件，同时更新 <code>latest/index.html</code> 和 <code>versions.js</code>；推送到 GitHub 后自动发布。</div>
     </aside>
     <section class="workspace">
-      <div class="toolbar"><div class="t-title"><strong id="selectedTitle">V5 · 每日 ACOS 标注版</strong><span id="selectedDescription">加载中…</span></div>
+      <div class="toolbar"><div class="t-title"><strong id="selectedTitle">V6 · DSP · AMC · SQP 10周整合版</strong><span id="selectedDescription">加载中…</span></div>
         <div class="actions"><a class="btn" id="latestButton" href="./latest/">查看固定最新版</a><button class="btn" id="copyButton" type="button">复制当前版本链接</button><a class="btn btn-primary" id="openButton" href="./latest/" target="_blank" rel="noopener">新窗口打开 ↗</a></div></div>
-      <div class="notice">下方显示原始报告网页。Google Trends 图表需浏览器联网加载；Amazon SQP 如未授权则不显示真实数据。路径归因数据不能直接视为 DSP 的因果增量。</div>
+      <div class="notice">下方显示原始报告网页。Google Trends 图表需浏览器联网加载；Amazon SQP 10 周搜索数据已内置，Google Trends 仍需联网。路径归因数据不能直接视为 DSP 的因果增量。</div>
       <div class="framewrap"><iframe id="viewer" title="GROWNSY 报告预览" src="./latest/index.html" loading="eager" referrerpolicy="no-referrer"></iframe></div>
     </section>
   </main>
@@ -64,9 +64,9 @@
       const viewer=document.getElementById('viewer');
       const open=document.getElementById('openButton');
       const query=new URLSearchParams(location.search);
-      let selected=byId[query.get('version')]?query.get('version'):(list[0]?.id||'v5');
+      let selected=byId[query.get('version')]?query.get('version'):(list[0]?.id||'v6');
       document.getElementById('versionCount').textContent=list.length;
-      document.getElementById('latestNum').textContent=(list.find(v=>v.current)||list[0])?.id.toUpperCase()||'V5';
+      document.getElementById('latestNum').textContent=(list.find(v=>v.current)||list[0])?.id.toUpperCase()||'V6';
       container.textContent='';
       for(const v of list){
         const b=document.createElement('button');b.type='button';b.className='version';b.dataset.id=v.id;
