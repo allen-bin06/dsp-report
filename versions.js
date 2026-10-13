@@ -1,11 +1,19 @@
 window.GROWNSY_VERSIONS = [
   {
+    "id": "v6",
+    "name": "DSP · AMC · SQP 10周整合版",
+    "date": "2026-10-13",
+    "change": "新增内置10周SQP品牌搜索及长尾词追踪，并保留DSP与N1T AMC转化路径综合分析。",
+    "file": "versions/v6.html",
+    "current": true
+  },
+  {
     "id": "v5",
     "name": "每日 ACOS 标注版",
     "date": "2026-10-12",
     "change": "在「每日花费 vs 归因销售额」柱形图上新增 ACOS 百分比，保留花费及销售额。",
     "file": "versions/v5.html",
-    "current": true
+    "current": false
   },
   {
     "id": "v4",
